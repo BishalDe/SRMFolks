@@ -74,17 +74,23 @@ WSGI_APPLICATION = 'SRMFolks.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-        'default': {
-            'ENGINE': 'djongo',
-            'NAME': 'SRMFolksDatabase',
-            'ENFORCE_SCHEMA': False,
-            'CLIENT': {
-                'host': 'mongodb+srv://bishalde:bishalde@srmfolksdatabase.54vqbmh.mongodb.net/?retryWrites=true&w=majority'
-            }  
-        }
-}
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'djongo',
+#             'NAME': 'SRMFolksDatabase',
+#             'ENFORCE_SCHEMA': False,
+#             'CLIENT': {
+#                 'host': 'mongodb+srv://bishalde:bishalde@srmfolksdatabase.54vqbmh.mongodb.net/?retryWrites=true&w=majority'
+#             }  
+#         }
+# }
 
+DATABASES = {
+      'default': {
+          'ENGINE': 'djongo',
+          'NAME': 'SRMFolks1',
+      }
+  }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
