@@ -16,7 +16,8 @@
     <header>
       <a href="/"><img src="/static/images/logo.png" alt="" /></a>
       <ul>
-        <li>
+        <!-- Theme Mode -->
+        <!-- <li>
           <a href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +31,7 @@
               ></path>
             </svg>
           </a>
-        </li>
+        </li> -->
         <li>
           <a href="#">
             <svg
@@ -75,7 +76,8 @@
               ></path></svg
           ></a>
         </li>
-        <li>
+        <!-- Logout -->
+        <!-- <li>
           <a href=""
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +91,7 @@
               ></path>
               <path d="m11 16 5-4-5-4v3.001H3v2h8z"></path></svg
           ></a>
-        </li>
+        </li> -->
         <li class="menubtn liactive" id="menubtn">
           <a
             ><svg
@@ -119,7 +121,7 @@
           </div>
         </div>
 
-        <h3>Menu {{ request.path }}</h3>
+        <h3>Menu</h3>
         <div class="nav-links">
           <ul>
             <li class="{% if request.path == '/' %}active-nav{% endif %}">
@@ -127,8 +129,8 @@
                 ><img src="/static/images/icons8-news-64.png" alt="" /> Feeds</a
               >
             </li>
-            <li>
-              <a href="#"
+            <li class="{% if request.path == '/community/' %}active-nav{% endif %}">
+              <a href="{% url 'communityPage' %}"
                 ><img
                   src="/static/images/icons8-microsoft-people-96.png"
                   alt=""
@@ -143,16 +145,16 @@
                 />Events</a
               >
             </li>
-            <li>
-              <a href=""
+            <li class="{% if request.path == '/announcements/' %}active-nav{% endif %}">
+              <a href="{% url 'announcementsPage' %}"
                 ><img
                   src="/static/images/icons8-announcement-58.png"
                   alt=""
                 />Announcements</a
               >
             </li>
-            <li>
-              <a href=""
+            <li class="{% if request.path == '/gallery/' %}active-nav{% endif %}">
+              <a href="{% url 'galleryPage' %}"
                 ><img
                   src="/static/images/icons8-gallery-64.png"
                   alt=""
@@ -165,6 +167,22 @@
                   src="/static/images/icons8-group-96.png"
                   alt=""
                 />Groups</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="/static/images/icons8-settings-96.png"
+                  alt=""
+                />Settings</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'logoutPage' %}"
+                ><img
+                  src="/static/images/icons8-logout-64.png"
+                  alt=""
+                />Logout</a
               >
             </li>
           </ul>

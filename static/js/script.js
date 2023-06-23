@@ -8,7 +8,7 @@ navbtn.addEventListener("click",function(){
 
 
 const width = window.innerWidth;
-if(width <700){
+if(width <750){
     container1.classList.toggle("active");
     navbtn.classList.toggle("liactive");
 }
